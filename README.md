@@ -24,14 +24,16 @@ Finally, we compare the potential performance of both database indexes if used t
 
 <h3>Results and Conclusion:</h3>
 
-<p>In queries and functions that require searching for a single item from the data structure, the key of the item being searched for is known. In this case, Extendible Hash Tables searches the item in constant time O(1). The query requires calculating the bucket ID using the hash functions and a single disk access to retrieve the bucket from secondary to primary memory.</p>
+<p>In queries and functions that require searching for a single item from the data structure, the key of the item being searched for is known. In this case, Extendible Hash Tables searche the item in constant time O(1). The query requires calculating the bucket ID using the hash functions and a single disk access to retrieve the bucket from secondary to primary memory. On the contrary, B-Trees are able to execute this in logarithmic time, which is very impressive too.</p>
+
 <p>
 For range queries, where more than 1 item is being retrieved from the data structures, range queries prove to be a better choice because of the arrangement of the data stored. B-trees store data in a standard order. If storing numbers, it uses ascending or descending order. If storing letters, they are stored lexicographically. This allows them to estimate the location of the desired data and retrieve it in fewer disk accesses as compared to hash tables that would have to search every table to find the desired data because this structure orders data into buckets using hash functions instead.
-
-<p>In conclusion, while both database indexes are incredible powerful, my investigation suggests that B-trees overall are a better choice than Extendible hash tables because this the tree can perform both types of queries very efficiently while the hash tables are highly efficient in exact queries however become very inefficient when running range queries.</p>
 </p>
 
+<p>In conclusion, while both database indexes are incredible powerful, my investigation suggests that B-trees overall are a better choice than Extendible hash tables because the B-trees can perform both types of queries very efficiently while the hash tables are highly efficient in exact queries however become very inefficient when running range queries.</p>
+
+<p>In Current databases however, users can assign multiple indexes within their database, which allows users to maximize efficiency by explicity keeping hash tables for exact query and B-trees for range.</p>
 
 
-<h4>To read Extended essay with more details on my investigation on these two amazing data structures, click here:</h4>
+<h4>To read the Extended essay with more details on my investigation on these two amazing data structures, click here:</h4>
 <a href="https://github.com/choudharyp1/BTrees/blob/master/Pratik%20Choudhary%20Extended%20Essay%20Computer%20Science%20Final.pdf">IB Computer Science Extended Essay</a>
